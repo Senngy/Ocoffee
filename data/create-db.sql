@@ -47,3 +47,48 @@ INSERT INTO coffee ("name", "description", "reference", "origine", "price_kg", "
 ('Peruvian Arabica', 'Café équilibré avec des notes de chocolat, une acidité modérée et un corps velouté.', '954589100', 'Pérou', 19.40, FALSE),
 ('Hawaiian Kona', 'Café rare au goût riche, une acidité douce et des nuances subtiles.', '958090105', 'Hawaï', 55.75, FALSE),
 ('Nicaraguan Maragogipe', 'Café avec des notes de fruits, une acidité vive et un corps plein.', '691550753', 'Nicaragua', 28.60, FALSE);
+
+-- Espresso: Corsé, Épicé
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (1, 1), (1, 2);
+
+-- Columbian: Acide
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (2, 3);
+
+-- Ethiopian Yirgacheffe: Doux, Fruité
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (3, 4), (3, 5);
+
+-- Brazilian Santos: Doux
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (4, 4);
+
+-- Guatemalan Antigua: Corsé
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (5, 1);
+
+-- Kenyan AA: Doux, Acide
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (6, 4), (6, 3);
+
+-- Sumatra Mandheling: Corsé
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (7, 1);
+
+-- Costa Rican Tarrazu: Acide
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (8, 3);
+
+-- Vietnamese Robusta: Épicé
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (9, 2);
+
+-- Tanzanian Peaberry: Fruité, Corsé
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (10, 5), (10, 1);
+
+-- Jamaican Blue Mountain: Doux
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (11, 4);
+
+-- Rwandan Bourbon: Fruité
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (12, 5);
+
+-- Panamanian Geisha: Fruité
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (13, 5);
+
+-- Peruvian Arabica: Corsé, Chocolaté
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (14, 1), (14, 6);
+
+-- Hawaiian Kona: Doux
+INSERT INTO coffee_caracteristic (coffee_id, caracteristic_id) VALUES (15, 4);
