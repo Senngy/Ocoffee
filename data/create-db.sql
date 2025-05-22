@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS "country", "coffee", "caracteristic", "coffee_caracteristic
 -- Table des pays
 CREATE TABLE "country" (
     "id" SERIAL PRIMARY KEY,
-    "name" VARCHAR(50) UNIQUE NOT NULL
+    "country_name" VARCHAR(50) UNIQUE NOT NULL
 );
 
 CREATE TABLE "coffee" (
@@ -30,7 +30,7 @@ CREATE TABLE "coffee_caracteristic" (
 );
 
 -- Insertion des pays
-INSERT INTO country ("name") VALUES
+INSERT INTO country ("country_name") VALUES
 ('Italie'),
 ('Colombie'),
 ('Éthiopie'),

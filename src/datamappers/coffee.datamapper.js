@@ -2,7 +2,7 @@ import { client } from '../db/client.js';
 
 export const coffeeDataMapper = {
     async getAll() {
-        const { rows: coffee } = await client.query('SELECT * FROM coffee');
+        const { rows: coffee } = await client.query('SELECT * FROM coffee JOIN country ON coffee.country_id = country.id');
         console.log("cafés :",coffee);
         return coffee;
     },

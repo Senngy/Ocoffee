@@ -10,7 +10,7 @@
   <body>
     <!-- Include Header here -->
     <header>
-      <a href="#">
+      <a href="/">
         <img src="../images/logo.svg" alt="logo oCoffee">
         oCoffee
       </a>
@@ -36,11 +36,11 @@
           <% if (coffees && Array.isArray(coffees) && coffees.length > 0) { %>
             <% for (const coffee of coffees) { %>
               <article>
-                <img src="../images/coffees/<%= coffee.image %>" alt="<%= coffee.name %>">
+                <img src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>">
                 <div>
                   <h2><%= coffee.name %></h2>
-                  <p>Origine <%= coffee.origin %></p>
-                  <p><%= coffee.price %> €/kg</p>
+                  <p>Origine: <%= coffee.country_name %></p>
+                  <p><%= coffee.price_kg %> €/kg</p>
                   <a class="button-outline" href="/catalogue/<%= coffee.id %>">Voir le détail</a>
                 </div>
               </article>
@@ -52,96 +52,7 @@
               </p>
             </article>
           <% } %>
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling 1</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
 
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling 2</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
         </div>
 
         <button class="button" id="see-all-products-button">
@@ -149,6 +60,8 @@
         </button>
       </section>
     </main>
+    <script src="/js/seeAll.js"></script>
+    <script src="/js/header.js"></script>
 
     <!-- Include Footer here -->
   <%- include('partials/footer.ejs') %>
