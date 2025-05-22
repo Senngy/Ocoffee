@@ -41,6 +41,21 @@
       <h2>Nouveautés</h2>
       
       <ul>
+        <% if (newCoffees && Array.isArray(newCoffees) && newCoffees.length > 0) { %>
+          <% for (const coffee of newCoffees) { %>
+            <li>
+              <article>
+                <img src="../images/coffees/<%= coffee.image %>" alt="<%= coffee.name %>">
+                <div>
+                  <h3><%= coffee.name %></h3>
+                  <a class="button-outline" href="/catalogue/<%= coffee.id %>">Voir le détail</a>
+                </div>
+              </article>
+            </li>
+          <% } %>
+        <% } else { %>
+          <li>Pas de cafés disponibles</li>
+        <% } %>
         <li>
           <article>
             <img src="../images/coffees/100955890.png" alt="Ethiopian Yirgacheffe">
