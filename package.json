@@ -1,12 +1,16 @@
 {
   "name": "sb04-ocoffee-senngy",
   "version": "1.0.0",
+  "type": "module",
   "description": "## Information du projet",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "dev": "node --watch --env-file=.env index.js",
+    "start": "node --env-file=.env index.js",
+    "db:create": "psql -U ocoffee -d ocoffe_db -f ./data/create-db.sql",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +25,7 @@
   "homepage": "https://github.com/O-clock-Athenes/SB04-Ocoffee-Senngy#readme",
   "dependencies": {
     "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "pg": "^8.16.0"
   },
