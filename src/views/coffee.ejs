@@ -1,0 +1,72 @@
+<%- include('partials/header.ejs') %>
+
+<!-- Common scripts -->
+<script defer src="/js/header.js"></script>
+
+<!-- Style -->
+<link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+<header>
+  <a href="/">
+    <img src="../images/logo.svg" alt="logo oCoffee">
+    oCoffee
+  </a>
+
+  <nav id="menu-navbar">
+    <button id="menu-button" aria-label="Show navigation links">
+      <?xml version="1.0" encoding="UTF-8"?><svg width="100%" height="100%" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="none"><path d="M3 5H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 19H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/catalogue">Catalogue</a></li>
+      <li><a href="/boutique">Boutique</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="about">
+    <div>
+        <h1>Votre spécialiste Haucloquois du café vous propose : <%= coffee.name %></h1>
+    </div>
+    <img src="../images/about.jpg" alt="Selection de nos meilleurs cafés oCoffee">
+  </section>
+
+  <section id="coffee">
+    <h2>Nouveautés</h2>
+
+      <% if (coffee) { %>
+            <article>
+              <img src="../images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>">
+              <div>
+                <h3>Origine: <%= coffee.country_name %></h3>
+                
+                <p><%= coffee.price_kg %> €/kg</p>
+
+                <% if (caracteristics && Array.isArray(caracteristics) && caracteristics.length > 0) { %>
+                  <h4>Caractéristiques :</h4>
+                  <ul>
+                    <% for (const caracteristic of caracteristics) { %>
+                      <li><%= caracteristic.type %></li>
+                    <% } %>
+                  </ul>
+                <% } else { %>
+                  <p>Aucune caractéristique disponible</p>
+                <% } %>
+                <h4>Description :</h4>
+                <p><%= coffee.description %></p>
+              </div>
+            </article>
+          
+      <% } else { %>
+        <p>Pas de cafés disponibles</p>
+      <% } %>
+  </section>
+
+</main>
+
+
+<%- include('partials/footer.ejs') %>
