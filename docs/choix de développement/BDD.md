@@ -28,11 +28,21 @@ Ce choix permet également une meilleure optique si le projet venait à s'étend
 - id
 - nom
 
-Relation:
+[Pays]
+- id
+- nom
+
+Relation 1 :
 Un Café peut avoir plusieurs Caractéristiques
 Une Caractéristique peut s’appliquer à plusieurs Cafés
 
 ==> Relation N:N : "Possède"
+
+Relation 2 : 
+Un café peut avoir un seul Pays
+Un Pays peut avoir plusieurs Cafés
+
+==> Relation 1:N : "Provenance"
 
 ### MLD
 Table Cafe (
@@ -50,7 +60,12 @@ Table Caracteristique (
   nom UNIQUE
 )
 
-Table CafeCaracteristique (
+Table Pays (
+  id PRIMARY KEY,
+  nom UNIQUE
+)
+
+Table Cafe_Caracteristique (
   cafe_id FOREIGN KEY REFERENCES Cafe(id),
   caracteristique_id FOREIGN KEY REFERENCES Caracteristique(id),
   PRIMARY KEY (cafe_id, caracteristique_id)
