@@ -4,6 +4,8 @@
   <link rel="stylesheet" href="/css/shop.css" />
   <link rel="stylesheet" href="/css/layoutshop.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
   <!-- Scripts -->
   <script defer src="../js/catalog.js"></script>
 </head>
@@ -35,8 +37,8 @@
         <h1>Notre boutique </h1>
         <p>Une référence pour les amateurs de café de la région. Notre passion, nos connaissances approfondies et notre engagement envers la qualité se reflètent dans chaque tasse servie.
          Nous sommes fiers d'avoir transformé notre voyage en une aventure qui permet à tant de personnes de découvrir et d'apprécier le véritable plaisir du café.</p>
-
     </div>
+   
     
     <div id="presentation">
         <img src="/images/Ocoffee/FoundersOcoffee.png" alt="Jean et Jacques, fondateurs de Ocoffee" class="founders-image">
@@ -44,22 +46,66 @@
             <h2>Qui sommes-nous ?</h2>
              <p>Jean et Jacques Pepper, deux frères passionnés par le café, et les fondateurs de notre boutique. Avec une expertise approfondie et un amour profond pour cette délicieuse boisson, 
                nous avons créé un espace où le café est célébré comme une expérience raffinée et inspirante.</p>
-
         </div>
       
     </div>
+    <div class="localisation">
+        <h2>Où nous trouver ?</h2>
+        <p>Notre boutique est située au cœur de la ville, à proximité de la place principale. Nous vous accueillons dans un espace chaleureux et convivial, où vous pourrez déguster nos cafés soigneusement sélectionnés.</p>
+      <div class="localisation-container">
+        <div id="map" style="height: 600px;" class="map"></div>
+        <img src="/images/Ocoffee/OcoffeeOutside.jpg" alt="Devanture de la boutique Ocoffee" id="reference" class="localisation-image">
+
+    </div>
+
+    </div>
+    
+    
     <div class="story">
+
+    
         <img src="/images/Ocoffee/OcoffeeColombie.jpg" alt="Montagnes colombiennes" class="story-image">
         <div class="story-text">
             <h2>Notre savoir faire</h2>
             <p>C’est au cœur des montagnes colombiennes, lors d’un voyage inoubliable, que Jean et Jacques ont découvert la véritable âme du café. Fascinés par le savoir-faire des producteurs et la richesse des terroirs, ils ont eu une révélation : partager cette passion à travers leur propre boutique.
             De retour en France, ils sélectionnent les meilleurs grains issus de plantations durables et créent Ocoffee, un lieu chaleureux dédié à l’art du café. Chaque tasse y raconte une histoire, entre tradition, exigence et respect des producteurs.</p>
         </div>
-        
     </div>
+    
+    <form action="" method="" id="contact-form">
+      <h2>Contactez-nous</h2>
+      <label for="name">Nom:</label>
+      <input type="text" id="name" name="user_name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="user_email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="user_message" rows="5" required></textarea>
+
+      <button type="submit" class="button contact-button">Envoyer</button>
+    </form>
+
+    <script>
+        
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(function() {
+          alert('Message envoyé avec succès!');
+        }, function(error) {
+          alert('Échec de l\'envoi du message. Veuillez réessayer.');
+          console.error('Erreur:', error);
+        });
+      });
+    </script>
+    
   </main>
   <script src="/js/seeAll.js"></script>
   <script src="/js/header.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="/js/mapShop.js"></script>
 
   <!-- Include Footer here -->
 

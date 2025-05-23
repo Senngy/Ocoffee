@@ -1,5 +1,18 @@
 main {
     position: relative;
+    margin-top: 3rem;
+}
+h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+p {
+    text-align: center;
+    font-size: 1.5rem;
 }
 .shop-image {
     width: 100%;
@@ -8,7 +21,7 @@ main {
 }
 .text-overlay {
     position: absolute;
-    top: 22%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* color: white; */
@@ -19,8 +32,8 @@ main {
     z-index: 2;
   }
   .founders-image {
-    width: 50%;
-    height: 50%;
+    width: 50vw;
+    height: auto;
     border-top-color: bisque;
     border-right-color: bisque;
     border-top: 1px solid;
@@ -41,19 +54,88 @@ main {
     align-self: center;
     margin-bottom: 2rem;
 }
+
+.localisation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.localisation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+.localisation p {
+    width: 80%;
+    
+}
 .story {
     position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 80vh;
+    margin-top: 2rem;
 }
 .story-image {
     position: absolute;
     right: 0%;
-    width: 70%;
+    width: 50%;
     height: auto;
     border-top-color: bisque;
-    border-right-color: bisque;
+    border-left-color: bisque;
     border-top: 1px solid;
-    border-right: 1px solid;
+    border-left: 1px solid;
 }
-  
+.story-text {
+    margin-top: 4rem;
+    padding: 0 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.story-text h2 {
+    align-self: center;
+    margin-bottom: 2rem;
+}
+.story-text p {
+    text-align: justify;
+}
+.story p {
+    padding: 0 1rem;
+
+}
+.map {
+    width: 50%;
+}
+.localisation-image {
+    width: 50%;
+    
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+form input, textarea {
+    width: 50%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-dark);
+    border-radius: 4px;
+    background-color: rgb(224, 163, 87);
+}
+.contact-button {
+    background-color: rgb(224, 163, 87);
+}
+.contact-button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-cream);
+}
+
+footer {
+    margin-top: 4rem;
+} 
