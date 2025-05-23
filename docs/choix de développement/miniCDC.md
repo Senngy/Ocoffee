@@ -5,7 +5,7 @@
 - Modifier les liens: ok
 - Etablir les datamappers et les controllers : ok
 - Créer les routes: ok
-- Définir les autre pages du site : Il faut une page pour chaque café et une page boutique
+- Définir les autre pages du site : Il faut une page pour chaque café et une page boutique : ok
 
 ## La page d'accueil
 
@@ -41,5 +41,9 @@
 - Revoir le style de la card de café 
 - Stylisé les tags
 
-## La page Boutique
-- Créer une page boutique
+## La page Boutique (physique)
+
+- Créer une page boutique : ok
+- Afficher la localisation : ok
+- Crer un formulaire de contact : ok
+- Lie le formulaire a un mail auto avec EmailJS
