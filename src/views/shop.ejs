@@ -1,0 +1,66 @@
+<%- include('partials/header.ejs') %>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="/css/shop.css" />
+  <link rel="stylesheet" href="/css/layoutshop.css">
+
+  <!-- Scripts -->
+  <script defer src="../js/catalog.js"></script>
+</head>
+
+<body>
+  <!-- Include Header here -->
+  <header>
+    <a href="/">
+      <img src="../images/logo.svg" alt="logo oCoffee">
+      oCoffee
+    </a>
+
+    <nav id="menu-navbar">
+      <button id="menu-button" aria-label="Show navigation links">
+        <?xml version="1.0" encoding="UTF-8"?><svg width="100%" height="100%" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="none"><path d="M3 5H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 19H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/catalogue">Catalogue</a></li>
+        <!-- <li><a href="/boutique">Boutique</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <img src="/images/Ocoffee/OcoffeeInside.png" alt="Interieur de la boutique Ocoffee" class="shop-image">
+    <div class="text-overlay">
+        <h1>Notre boutique </h1>
+        <p>Une référence pour les amateurs de café de la région. Notre passion, nos connaissances approfondies et notre engagement envers la qualité se reflètent dans chaque tasse servie.
+         Nous sommes fiers d'avoir transformé notre voyage en une aventure qui permet à tant de personnes de découvrir et d'apprécier le véritable plaisir du café.</p>
+
+    </div>
+    
+    <div id="presentation">
+        <img src="/images/Ocoffee/FoundersOcoffee.png" alt="Jean et Jacques, fondateurs de Ocoffee" class="founders-image">
+        <div class="presentation-text">
+            <h2>Qui sommes-nous ?</h2>
+             <p>Jean et Jacques Pepper, deux frères passionnés par le café, et les fondateurs de notre boutique. Avec une expertise approfondie et un amour profond pour cette délicieuse boisson, 
+               nous avons créé un espace où le café est célébré comme une expérience raffinée et inspirante.</p>
+
+        </div>
+      
+    </div>
+    <div class="story">
+        <img src="/images/Ocoffee/OcoffeeColombie.jpg" alt="Montagnes colombiennes" class="story-image">
+        <div class="story-text">
+            <h2>Notre savoir faire</h2>
+            <p>C’est au cœur des montagnes colombiennes, lors d’un voyage inoubliable, que Jean et Jacques ont découvert la véritable âme du café. Fascinés par le savoir-faire des producteurs et la richesse des terroirs, ils ont eu une révélation : partager cette passion à travers leur propre boutique.
+            De retour en France, ils sélectionnent les meilleurs grains issus de plantations durables et créent Ocoffee, un lieu chaleureux dédié à l’art du café. Chaque tasse y raconte une histoire, entre tradition, exigence et respect des producteurs.</p>
+        </div>
+        
+    </div>
+  </main>
+  <script src="/js/seeAll.js"></script>
+  <script src="/js/header.js"></script>
+
+  <!-- Include Footer here -->
+
+<%- include('partials/footer.ejs') %>
