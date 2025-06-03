@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="CfEwLxOQWi3Qi-9HVH3V" name="Page-1">
-        <mxGraphModel dx="1216" dy="535" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1116" dy="641" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="30" value="coffee" style="swimlane;startSize=23;" parent="1" vertex="1">
-                    <mxGeometry x="35" y="90" width="200" height="236" as="geometry"/>
+                    <mxGeometry x="35" y="90" width="200" height="212" as="geometry"/>
                 </mxCell>
                 <mxCell id="31" value="name" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="30" vertex="1">
                     <mxGeometry x="1" y="30" width="48" height="26" as="geometry"/>
@@ -24,9 +24,6 @@
                 </mxCell>
                 <mxCell id="63" value="disponible" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="30" vertex="1">
                     <mxGeometry y="177" width="69" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="77" value="country_id" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="30">
-                    <mxGeometry x="4.5" y="201" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="64" value="caracteristic" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="321" y="140" width="200" height="65" as="geometry"/>
@@ -49,23 +46,23 @@
                 <mxCell id="72" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Choix MCD&lt;/h1&gt;&lt;p&gt;&amp;nbsp; A la demande du client on a effectué la création de 3 entités, une entité pour les pays, une pour les cafés et une autre pour les caractéristiques avec une association &lt;i&gt;&quot;many to many&quot;&lt;/i&gt;. Cela permettra d&#39;optimiser plus facilement à l&#39;avenir si tel est le besoin du client.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Comme un café peut avoir plusieurs caractéristiques cela évite des répétitions et facilite le traitement des données. On aura donc une association unique à générer &quot;café_caracteristique&quot;. Et si jamais le client compte ajouter de nouvelles caractéristique, telle que &quot; l&#39;intensité, les notes, agrémentations etc...&quot; on aura juste à les ajouter à l&#39;entité et si besoin pareil pour les pays si on ajouter par exemple une région ou autre.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="307" y="230" width="485" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="73" value="country" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="73" value="country" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="78" y="376" width="200" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="74" value="nom" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="73">
+                <mxCell id="74" value="nom" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="73" vertex="1">
                     <mxGeometry x="6" y="32" width="41" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="76" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="77">
+                <mxCell id="76" value="" style="endArrow=classic;startArrow=classic;html=1;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="78" y="376" as="sourcePoint"/>
-                        <mxPoint x="58" y="326" as="targetPoint"/>
+                        <mxPoint x="46" y="305" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="79" value="0.N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+                <mxCell id="79" value="0.N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="77" y="355" width="32" height="21" as="geometry"/>
                 </mxCell>
-                <mxCell id="80" value="1.1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="32" y="326" width="24" height="19" as="geometry"/>
+                <mxCell id="80" value="1.1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="21" y="302" width="24" height="19" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

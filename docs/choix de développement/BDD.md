@@ -4,7 +4,7 @@
 
 ## Une relation many-to-many pour les caractéristiques café ?
 
-Bien que le projet actuel ne contienne qu'une quinzaine de cafés avec un nombre limité de caractéristiques, on a fait le choix de normaliser les données avec trois tables distinctes (`cafes`, `caracteristiques`, `cafe_caracteristique`; les clés seront toutes en anglais) afin de :
+Bien que le projet actuel ne contienne qu'une quinzaine de cafés avec un nombre limité de caractéristiques, on a fait le choix de normaliser les données avec trois tables distinctes (`café`, `caracteristique`, `pays`; les clés seront toutes en anglais et il y aura aussi une table d'association café_caractéristique ) afin de :
 
 - Faciliter les futures évolutions (ajout, modification de données sans duplication)
 - Permettre des recherches avancées (filtrer les cafés par combinaison de caractéristiques)
@@ -16,7 +16,6 @@ Ce choix permet également une meilleure optique si le projet venait à s'étend
 
 ### MCD
 [Café]
-- id
 - nom
 - description
 - référence
@@ -25,11 +24,9 @@ Ce choix permet également une meilleure optique si le projet venait à s'étend
 - disponible
 
 [Caractéristique]
-- id
 - nom
 
 [Pays]
-- id
 - nom
 
 Relation 1 :
