@@ -8,7 +8,7 @@ export const mainController = {
   
     async homePage(_, res) {
         const newCoffees = await coffeeDataMapper.getNewCoffee();
-        console.log("3 derniers cafés dispo :", newCoffees);
+       // console.log("3 derniers cafés dispo :", newCoffees);
       res.render('home', { newCoffees });
     },
 

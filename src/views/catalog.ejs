@@ -36,13 +36,14 @@
         <div class="articles only-display-4-articles" id="articles-list">
           <% if (coffees && Array.isArray(coffees) && coffees.length > 0) { %>
             <% for (const coffee of coffees) { %>
-              <article>
-                <img src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>">
+              
+              <article class="article <%= !coffee.available ? 'not-available' : '' %>">
+                <img src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>" class="<%= !coffee.available ? 'img-not-available' : '' %>">
                 <div>
                   <h2><%= coffee.name %></h2>
                   <p>Origine: <%= coffee.country_name %></p>
                   <p><%= coffee.price_kg %> €/kg</p>
-                  <a class="button-outline" href="/catalogue/<%= coffee.id %>">Voir le détail</a>
+                  <a class="button-outline" href="/catalogue/<%= coffee.id %>">Voir le détail <%= !coffee.available ? '(Rupture de stock)' : '' %></a>
                 </div>
               </article>
             <% } %>
