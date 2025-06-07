@@ -3,8 +3,7 @@ dotenv.config();
 import express from 'express';
 import session from 'express-session';
 import { mainRouter } from './src/routes/main.route.js';
-
-
+import { adminRouter } from './src/routes/admin.route.js';
 
 
 const app = express();
@@ -31,6 +30,7 @@ app.use(session({
 }));
 
 app.use(mainRouter);
+app.use(adminRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

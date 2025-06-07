@@ -6,7 +6,7 @@
 - Etablir les datamappers et les controllers : ok
 - Créer les routes: ok
 - Définir les autre pages du site : Il faut une page pour chaque café et une page boutique : ok
-- Gérer l'authentification admin avec sécurité sur le chemin :
+- Gérer l'authentification admin avec sécurité sur les chemins, duré de session : ok
 
 ## La page d'accueil
 
@@ -17,9 +17,9 @@
 - Ajouter un icon "new" sur les card des nouveautés : 
 
 ### Le Style
-- Ajouter une image de fond prenant la moitié de la hauteur de la page
-- Ajouter un hover sur les cards des cafés
-- Peut etre changé le style des cards
+- Ajouter une image de fond prenant la moitié de la hauteur de la page : 
+- Ajouter un hover sur les cards des cafés : ok
+- Peut etre changé le style des  :
 
 ## La page Catalogue
 
@@ -34,7 +34,7 @@
 - Afficher les informations du café : ok
 - Afficher les caractéristiques du café : ok
 - Améliorer le visu de la page :
-- Creer des tags visuels pour les caractéristiques du café
+- Creer des tags visuels pour les caractéristiques du café :
 - Proposer un bouton "ajouter au panier" sauf pour ceux qui ne sont pas disponibles
 - Proposer des cafés avec des caractéritiques similaires
 - Proposer un bouton "ajouter à la wishlist" pour les non disponibles voir demande de mail 
@@ -49,16 +49,32 @@
 - Créer une page boutique : ok
 - Afficher la localisation : ok
 - Crer un formulaire de contact : ok
-- Lie le formulaire a un mail auto avec EmailJS
+- Lie le formulaire a un mail auto avec EmailJS : ok
 
 ## Administration 
 
 ### La page connexion 
 
 - Créer la page avec le formulaire : ok
-- Gerer les sessions : 
-- Vérifier l'authentification : 
-- 
-- 
+- Gerer les sessions : ok
+- Vérifier l'authentification : ok
+- Finir le style :
 
 ### La page admin
+
+- Créer la page : ok
+- Revoir les options de l'admin à l'accueil : 
+- Finir le style : 
+
+### La page de gestion des cafés :
+
+- Ajouter un bouton supprimer : 
+- Ajouter une verification de suppresion : 
+- Permettre d'ajouter un nouveau café avec toutes ses caractéristiques :
+- Ajouter un bouton modifier qui ménera vers une page pour modifier les caract du café : 
+
+### La page de mofication du café :
+
+- Permettre de modifier n'importe quelle caratc du café :
+- Ajouter une verif de modification (validation) : 
+- Finir me style 
