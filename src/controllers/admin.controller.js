@@ -17,7 +17,7 @@ export const adminController = {
         res.render('admin', { title: 'Administration', coffees, caract });
     },
     login(req, res) {
-        const { username, password } = req.body;
+        const { username, password } = req.body; // Récupération des identifiants depuis le corps de la requête
 
         // Vérification des identifiants (à adapter selon votre logique)
         if (username === process.env.ADMIN_USER && password === process.env.ADMIN_PASSWORD) {

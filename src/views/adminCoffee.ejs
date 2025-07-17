@@ -26,8 +26,42 @@
       </nav>
     </header>
     <main>
+      <section class="add-coffee">
+        <h1>Ajouter un café</h1>
+        <form action="/admin/coffees/add" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Nom du café</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">  
+            <label for="country_name">Pays d'origine</label>
+            <input type="text" id="country_name" name="country_name" required>  
+          </div>
+          <div class="form-group">
+            <label for="price_kg">Prix au kg (€)</label>
+            <input type="number" id="price_kg" name="price_kg" step="0.01" required>
+          </div>
+            
+          <div class="form-group">
+            <label for="reference">Référence</label>
+            <input type="text" id="reference" name="reference" required>  
+          </div>
+          <div class="form-group">
+            <label for="available">Disponible</label>
+            <input type="checkbox" id="available" name="available" checked>
+          </div>
+          <div class="form-group">
+            <label for="image">Image du café</label>
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
+          </div>
+          <button type="submit" class="button">Ajouter le café</button>
+        </form>
+        <p class="note">Note: L'image doit être au format PNG ou JPEG.</p>  
+        
+      </section>
       <section id="catalog">
-        <h1>Notre catalogue</h1>
+        <h1>Vos cafés</h1>
+
 
         <div class="articles only-display-4-articles" id="articles-list">
           <% if (coffees && Array.isArray(coffees) && coffees.length > 0) { %>
@@ -39,7 +73,10 @@
                   <h2><%= coffee.name %></h2>
                   <p>Origine: <%= coffee.country_name %></p>
                   <p><%= coffee.price_kg %> €/kg</p>
-                  <a class="button-outline" href="/catalogue/<%= coffee.id %>">Voir le détail <%= !coffee.available ? '(Rupture de stock)' : '' %></a>
+                  <a class="button-outline modify" href="/catalogue/<%= coffee.id %>">Modifier <%= !coffee.available ? '(Rupture de stock)' : '' %></a>
+                  <form method="POST" action="/admin/coffees/<%= coffee.id %>/delete" class="delete-form" data-coffee-name="<%= coffee.name %>">
+                    <button type="submit" class="button-outline delete">Supprimer</button>
+                  </form>
                 </div>
               </article>
             <% } %>
